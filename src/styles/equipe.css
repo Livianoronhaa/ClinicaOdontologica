@@ -1,0 +1,51 @@
+.equipe {
+  text-align: center;
+  padding: 64px 16px;
+  background-color: #f8f9f9;
+  font-family: 'Inter', sans-serif;
+}
+
+.equipe h2 {
+  color: #1f4e4f;
+  font-size: 18px;
+  margin-bottom: 48px;
+  font-weight: 600;
+}
+
+.equipe-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+}
+
+.dentista {
+  max-width: 160px;
+}
+
+.dentista img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dentista h3 {
+  color: #1f4e4f;
+  font-size: 16px;
+  margin-bottom: 3px;
+  font-weight: 600;
+}
+
+.dentista p {
+  color: #777;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .equipe h2 {
+    font-size: 32px;
+  }
+}

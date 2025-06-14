@@ -1,0 +1,101 @@
+.agendamento {
+  padding: 48px 16px;
+  background-color: #f6f6f6;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.agendamento h2 {
+  font-size: 20px;
+  margin-bottom: 32px;
+  color: #276f71;
+}
+
+.form-agendamento {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  flex: 1;
+}
+
+.form-field label {
+  font-size: 15px;
+  margin-bottom: 5px;
+  color: #3a3d3d;
+}
+
+.form-field input,
+.form-field select {
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.btn-agendar {
+  background-color: #2d6f73;
+  color: white;
+  font-size: 16px;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: center;
+}
+
+.btn-agendar:hover {
+  background-color: #225356;
+}
+
+.lista-agendamentos {
+  margin-top: 32px;
+  padding: 16px;
+}
+
+.agendamento-item {
+  background-color: #f0f7f7;
+  border: 1px solid #cce3e3;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  font-family: 'Inter', sans-serif;
+}
+
+.btn-excluir {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  margin-top: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-excluir:hover {
+  background-color: #c0392b;
+}
+
+@media (min-width: 768px) {
+  .input-group {
+    flex-direction: row;
+  }
+
+  .agendamento h2 {
+    font-size: 32px;
+  }
+}

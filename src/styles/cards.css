@@ -1,0 +1,95 @@
+.beneficios {
+  text-align: center;
+  padding: 64px 16px;
+  background-color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+.beneficios h2 {
+  font-size: 18px;
+  margin-bottom: 32px;
+  color: #3a3d3d;
+  font-weight: 500;
+}
+
+.beneficios .destaque {
+  color: #2d6f73;
+  font-weight: 700;
+}
+
+.cards-beneficios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.card {
+  background-color: #276f71;
+  border-radius: 10px;
+  padding: 32px;
+  max-width: 280px;
+  flex: 1 1 200px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.card2 {
+  background-color: #9ae0e2;
+  border-radius: 10px;
+  padding: 32px;
+  max-width: 280px;
+  flex: 1 1 200px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.dentista:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 60px;
+  margin-bottom: 16px;
+}
+
+.card h3 {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 13px;
+  color: white;
+}
+
+.card2:hover {
+  transform: translateY(-5px);
+}
+
+.card2 img {
+  width: 60px;
+  margin-bottom: 16px;
+}
+
+.card2 h3 {
+  color: #276f71;
+  font-size: 20px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.card2 p {
+  font-size: 13px;
+  color: #276f71;
+}
+
+@media (min-width: 768px) {
+  .beneficios h2 {
+    font-size: 32px;
+  }
+}

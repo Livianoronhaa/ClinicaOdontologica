@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/src/styles/nav.css">
+  <link rel="stylesheet" href="/src/styles/header.css">
+  <link rel="stylesheet" href="/src/styles/agendamento.css">
+  <link rel="stylesheet" href="/src/styles/modal.css">
+  <link rel="stylesheet" href="/src/styles/cards.css">
+  <link rel="stylesheet" href="/src/styles/equipe.css">
+  <link rel="stylesheet" href="/src/styles/footer.css">
+
+
+  <title>Clínica DentalCare</title>
+</head>
+
+<body>
+  <noscript>
+    <div class="no-js-warning" role="alert" aria-live="assertive" tabindex="0">
+      <p>⚠️ Javascript desativado!.</p>
+    </div>
+  </noscript>
+  <nav class="navbar">
+    <div class="navbar-header">
+      <img src="/src/logo.svg" alt="logotipo" class="logo">
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">&#9776;</button>
+    </div>
+    <div class="navbar-links">
+      <a href="#contato">Contato</a>
+      <a href="#equipe">Nossa equipe</a>
+      <a href="#agendamento">Realizar agendamento</a>
+    </div>
+  </nav>
+
+  <header class="banner">
+    <img src="/src/banner.jpg" alt="Banner do site" class="banner-img">
+
+    <div class="banner-content">
+      <h2>Conheça nossos <br> serviços Odontológicos</h2>
+
+      <div class="banner-list-text">
+        <ul>
+          <li>Restauração dentária</li>
+          <li>Consulta de rotina</li>
+          <li>Aparelho Ortodôntico</li>
+          <li>Tratamento de canal</li>
+          <li>Radiografia odontológica</li>
+          <li>Cirurgias orais</li>
+        </ul>
+        <button>Fazer agendamento</button>
+
+      </div>
+
+    </div>
+  </header>
+
+  <section class="agendamento" id="agendamento">
+    <h2>Faça seu agendamento!</h2>
+    <form class="form-agendamento" aria-label="Formulário de agendamento de consulta odontológica">
+      <div class="input-group">
+        <div class="form-field">
+          <label for="nome">Seu nome:</label>
+          <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required
+            aria-label="Digite seu nome completo">
+        </div>
+        <div class="form-field">
+          <label for="email">Seu e-mail:</label>
+          <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required
+            aria-label="Digite seu e-mail">
+        </div>
+      </div>
+
+      <div class="input-group">
+        <div class="form-field">
+          <label for="documento">Seu documento:</label>
+          <input type="text" id="documento" name="documento" placeholder="Digite seu CPF, RG ou CNH" required
+            aria-label="Digite seu CPF, RG ou CNH">
+        </div>
+        <div class="form-field">
+          <label for="telefone">Seu telefone:</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="Digite seu número para contato" required
+            aria-label="Digite seu telefone com DDD">
+        </div>
+      </div>
+
+      <div class="input-group">
+        <div class="form-field">
+          <label for="servico">Qual serviço você deseja?</label>
+          <select id="servico" name="servico" required aria-label="Selecione o serviço desejado">
+            <option value="">-- Selecione --</option>
+            <option value="Cirurgia oral">Cirurgia oral</option>
+            <option value="Radiografia odontológica">Radiografia odontológica</option>
+            <option value="Tratamento de canal">Tratamento de canal</option>
+            <option value="Aparelho Ortodôntico">Aparelho Ortodôntico</option>
+            <option value="Consulta de rotina">Consulta de rotina</option>
+            <option value="Restauração dentária">Restauração dentária</option>
+          </select>
+          <small id="descricao-servico" class="descricao-servico"></small>
+
+
+
+        </div>
+        <div class="form-field">
+          <label for="data">Data para agendamento:</label>
+          <input type="date" id="data" name="data" required aria-label="Escolha a data para o agendamento">
+        </div>
+      </div>
+
+      <button type="submit" class="btn-agendar" aria-label="Enviar formulário de agendamento">Agendar</button>
+    </form>
+
+    <div id="lista-agendamentos" class="lista-agendamentos" aria-live="polite">
+      <p>Seus agendamentos:</p>
+    </div>
+
+    <div id="mensagem-vazia" class="mensagem-vazia" aria-live="polite">Você não tem nenhum agendamento.</div>
+  </section>
+
+
+  <section class="beneficios">
+    <h2>
+      Cuidar do Sorriso é Mais que Estética:<br>
+      <span class="destaque">É Ganhar Qualidade de Vida!</span>
+    </h2>
+
+    <div class="cards-beneficios">
+      <div class="card">
+        <img src="src/plano.svg" alt="Ícone plano personalizado">
+        <h3>Plano de Tratamento Personalizado</h3>
+        <p>Avaliação para identificar suas necessidades e criar um plano exclusivo para você.</p>
+      </div>
+
+      <div class="card2">
+        <img src="src/tecnologia.svg" alt="Ícone tecnologia de ponta">
+        <h3>Tecnologia de Ponta</h3>
+        <p>Equipamentos modernos e técnicas seguras para maior agilidade e conforto.</p>
+      </div>
+
+      <div class="card">
+        <img src="src/resultados.svg" alt="Ícone resultados">
+        <h3>Resultados que Transformam</h3>
+        <p>Restaure a função e a estética do seu sorriso com tratamentos comprovados.</p>
+      </div>
+
+      <div class="card2">
+        <img src="src/humanizado.svg" alt="Ícone acompanhamento">
+        <h3>Acompanhamento Humanizado</h3>
+        <p>Atendimento com empatia e acompanhamento contínuo para sua total satisfação.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="equipe" id="equipe">
+    <h2>Você vai ser cuidado(a) por</h2>
+
+    <div class="equipe-container">
+      <div class="dentista">
+        <img src="src/ana.webp" alt="Foto da Dr. Ana Júlia">
+        <h3>Dr. Ana Júlia</h3>
+        <p>Especialista em prótese dentária</p>
+      </div>
+
+      <div class="dentista">
+        <img src="src/marcos.svg" alt="Foto do Dr. Marcos">
+        <h3>Dr. Marcos</h3>
+        <p>Clínico Geral</p>
+      </div>
+
+      <div class="dentista">
+        <img src="src/priscila.webp" alt="Foto da Dr. Priscila Almeida">
+        <h3>Dr. Priscila Almeida</h3>
+        <p>Especialista em Ortodontia</p>
+      </div>
+
+      <div class="dentista">
+        <img src="src/mauro.jpg" alt="Foto do Mauro Vieira">
+        <h3>Dr. Mauro Vieira</h3>
+        <p> Especialista em cirurgia e traumatologia</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-logo">
+        <img src="src/logotipo.svg" alt="Logotipo DentalCare">
+      </div>
+
+      <div class="footer-contato" id="contato">
+        <h4>Contato</h4>
+        <p><img src="src/instagram.svg" alt="icon instagram"> @dentalcare</p>
+        <p><img src="src/whatsapp.svg" alt="icon whatsapp"> (88) 97654-3245</p>
+        <p><img src="src/email.svg" alt="icon email"> dentalcare@gmail.com</p>
+      </div>
+
+      <div class="footer-endereco">
+        <h4>Endereço</h4>
+        <p>Rua Avenida Paulo Tosto<br>
+          Número 678<br>
+          Boa Viagem - CE, 6870-000</p>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <div class="modal" id="modal-confirmacao">
+    <div class="modal-content">
+      <span class="close" id="fechar-modal">&times;</span>
+      <div class="modal-icon">✔️</div>
+      <h3>Agendamento confirmado!</h3>
+      <p id="mensagem-confirmacao">
+        <!-- Será preenchido via JS -->
+      </p>
+      <small>Entraremos em contato para marcar um horário!</small>
+      <button id="btn-confirmar-modal">Confirmar</button>
+    </div>
+  </div>
+
+
+  <script src="/src/js/script.js"></script>
+  <script src="/src/js/agendamento.js"></script>
+  <script src="/src/js/saudacao.js"></script>
+
+</body>
+
+</html>
