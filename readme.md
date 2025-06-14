@@ -48,18 +48,24 @@ A aplicação está dividida em seções principais:
 const dataFormatada = new Date(data).toLocaleDateString('pt-BR');
 msg.textContent = `Agendamos para ${nome} uma ${servico.toLowerCase()} no dia ${dataFormatada}.`;
 ```
+![image](https://github.com/user-attachments/assets/335ca0f9-0d92-4b9c-b2e1-063f1e484ac3)
 
 ### 3. Exibição de Agendamentos
 
 Cada agendamento feito é exibido dinamicamente na página com botão para exclusão.
 
 ```javascript
-const agendamentoDiv = document.createElement('div');
-agendamentoDiv.innerHTML = `
-  <strong>${nome}</strong> - ${servico} em ${dataFormatada}
-  <button class="btn-excluir">Excluir</button>
-`;
+const novo = document.createElement('div');
+    novo.classList.add('agendamento-item');
+    novo.innerHTML = `
+    <strong>${nome}</strong> agendou <em>${servico.toLowerCase()}</em><br>
+    📅 ${dataFormatada} | 📞 ${telefone} | ✉️ ${email}
+    <br>
+    <button class="btn-excluir">Excluir agendamento</button>
+  `;
 ```
+![image](https://github.com/user-attachments/assets/384bf384-fdec-4cc4-b2a9-df94209f5781)
+
 
 ### 4. Mensagem de Nenhum Agendamento
 
@@ -67,42 +73,27 @@ Exibe uma mensagem como "Você não tem nenhum agendamento" quando a lista está
 
 ### 5. Exclusão de Agendamento
 
-Botões "Excluir" removem agendamentos individualmente e atualizam a lista.
+Botões "Excluir agendamento" removem agendamentos individualmente e atualizam a lista.
 
-### 6. Tema Claro/Escuro
-
-Um botão alterna entre modo claro e escuro. A preferência do usuário é salva no localStorage.
-
-```javascript
-botaoTema.addEventListener('click', function () {
-  body.classList.toggle('tema-escuro');
-  localStorage.setItem(
-    'tema',
-    body.classList.contains('tema-escuro') ? 'escuro' : 'claro'
-  );
-});
-```
 
 ### 7. Boas-vindas Dinâmica
 
 Um alert exibe uma saudação de acordo com o horário: Bom dia, Boa tarde ou Boa noite.
 
 ```javascript
-const hora = new Date().getHours();
-if (hora < 12) {
-  alert('Bom dia! Seja bem-vindo à DentalCare!');
-} else if (hora < 18) {
-  alert('Boa tarde! Seja bem-vindo à DentalCare!');
-} else {
-  alert('Boa noite! Seja bem-vindo à DentalCare!');
+function gerarSaudacao() {
+  const hora = new Date().getHours();
+
+  if (hora >= 5 && hora < 12) {
+    return 'Bom dia';
+  } else if (hora >= 12 && hora < 18) {
+    return 'Boa tarde';
+  } else {
+    return 'Boa noite';
+  }
 }
 ```
 
-### 8. Alteração de Estilo com change
-
-Ao trocar o serviço no select, o campo de data muda sua cor para destacar que deve ser preenchido.
-
----
 
 ## 📁 Estrutura de Pastas
 
@@ -111,6 +102,7 @@ Ao trocar o serviço no select, o campo de data muda sua cor para destacar que d
 ├── js/
 │   ├── script.js
 │   └── agendamento.js
+│   └── saudacao.js
 ├── styles/
 │   ├── agendamento.css
 │   ├── modal.css
@@ -128,9 +120,8 @@ Ao trocar o serviço no select, o campo de data muda sua cor para destacar que d
 
 - HTML5
 - CSS3 (Flexbox e Media Queries)
-- JavaScript Vanilla (sem frameworks)
+- JavaScript (sem frameworks)
 - Responsivo e acessível
-- Armazenamento local com localStorage
 
 ## ✍️ Autor
 
